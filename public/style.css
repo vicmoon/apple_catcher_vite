@@ -1,15 +1,94 @@
-body {
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    --light: whitesmoke; 
+    --dark: black;
+    --grey: grey; 
+  }
+  
+  *{
     margin: 0;
     padding: 0;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #000000;
-}
-
-#app {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    box-sizing: border-box;
+  
+  }
+  
+  html, body{
+    height: 100%;
+  }
+  
+  body{
+    background-color: var(--dark);
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header, footer{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    padding: 40px, 20px;
+    margin: 5px;
+  
+  }
+  
+  main{
+    flex:1;
+    display: flex;
+  }
+  
+  #gameCanvas{
+    border: 1px solid yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    z-index: 1;
+  }
+  
+  .gameUI {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(34, 5, 34);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  
+  }
+  
+  .gameUI *{
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  #gameStart{
+    display: flex;
+  }
+  
+  #gameEnd{
+    display: none;
+  }
+  
+  #startBtn{
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    font-family: inherit;
+    border-radius: 10px;
+    background-color: yellow;
+  }
+  
+  #startBtn p{
+    margin-top: 0;
+  }
+  
+  #startBtn:hover{
+    background-color: blue;
+    cursor: pointer;
+    border: 0.5px solid green;
+  }
