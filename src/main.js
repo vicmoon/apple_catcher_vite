@@ -1,8 +1,5 @@
 
-
 import Phaser from 'phaser';
-
-
 
 const canvas = {
   width: 500, 
@@ -97,8 +94,6 @@ class GameScene extends Phaser.Scene{
     console.log(this.remainingTime);
     this.textTime.setText(`Time left: ${Math.round(this.remainingTime).toString()} `);
     
-
-
     if(this.target.y >= canvas.height){
       this.target.setY(1);
       this.target.setX(this.getRandomX());
@@ -162,7 +157,7 @@ const config = {
 }
 
 
-const game = new Phaser.Game(config);
+
 
 startButton.addEventListener("click", () => {
   console.log("Clicked");
@@ -172,5 +167,5 @@ startButton.addEventListener("click", () => {
 })
 
 
-
-export default new Phaser.Game(config);
+const game = new Phaser.Game(config);
+export default game;
