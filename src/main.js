@@ -72,7 +72,7 @@ class GameScene extends Phaser.Scene{
     fill: "#000000"
   });
 
-  this.timedEvent = this.time.delayedCall(40000, this.gameOver,[],this );
+  this.timedEvent = this.time.delayedCall(30000, this.gameOver,[],this );
 
   this.emitter = this.add.particles(0, 0,"star", {
     speed: 100, 
