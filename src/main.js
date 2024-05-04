@@ -129,7 +129,7 @@ class GameScene extends Phaser.Scene{
   gameOver(){
     this.sys.game.destroy(true);
 
-    if(this.points >= 30){
+    if(this.points >= 20){
       finalScore.textContent = "You won 🏆"
       finalScore.innerHTML = this.points; 
     }else{
