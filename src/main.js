@@ -130,11 +130,11 @@ class GameScene extends Phaser.Scene{
     this.sys.game.destroy(true);
 
     if(this.points >= 20){
-      finalScore.textContent = "You won 🏆"
-      finalScore.innerHTML = this.points; 
+      finalScore.innerHTML = this.points;
+      finalScore.innerHTML = "You won 🏆" 
     }else{
-      finalScore.textContent = this.points; 
-      finalScore.textContent = "You lost!😭"
+      finalScore.innerHTML = this.points; 
+      finalScore.innerHTML = "You lost!😭"
     }
      gameEnd.style.display = "flex";
   
