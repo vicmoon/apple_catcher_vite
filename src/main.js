@@ -37,6 +37,7 @@ class GameScene extends Phaser.Scene{
     this.load.image("apple", "./assets/apple.png");
     this.load.audio("coin", "./assets/coin.mp3");
     this.load.audio("bgMusic", "./assets/bgMusic.mp3");
+    this.load.image("star", "./assets/star.jpg");
   }
   create(){
 
@@ -71,17 +72,18 @@ class GameScene extends Phaser.Scene{
     fill: "#000000"
   });
 
-  this.timedEvent = this.time.delayedCall(300, this.gameOver,[],this );
+  this.timedEvent = this.time.delayedCall(40000, this.gameOver,[],this );
 
-  this.emitter = this.add.particles(0, 0,"money", {
+  this.emitter = this.add.particles(0, 0,"star", {
     speed: 100, 
+    scale:0.01,
     gravityY: speedDown-200,
     duration: 100, 
     emitting: false
 
   }); 
 
-  this.emitter.startFollow(this.player,this.player.width/2, this.player.height/2, true)
+  this.emitter.startFollow(this.player,this.player.width/2, this.player.height/2, true);
 
 
 }
