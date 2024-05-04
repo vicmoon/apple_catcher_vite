@@ -17,7 +17,7 @@
   } */
   
   body{
-    background-image: url(/assets/apples.jpg);
+    background-image: url(./assets/apples.jpg);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
