@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/public/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css">
     <title>Apple-Catcher</title>
@@ -15,20 +15,20 @@
   <main>
     <canvas id="gameCanvas"></canvas>
     <div id="gameStart" class="gameUI">
-      <P>You have 40s to catch 30 🍎🍎🍎🍎🍎</P>
+      <p>You have 40s to catch 30 🍎</p>
       <p> If you catch more you win! 🏆</p>
       <p> If you catch less you lose 😭</p>
       <p>Click the start button to begin!</p>
       <button id="startBtn"> Start</button>
     </div>
-    <div id="gameEnd" class="gameUI">
-      <p>Game over ☠️</p>
+  </main>
+    <div id="gameEnd" class="gameUI" style="display: none;">
+      <span>Game over ☠️</span>
       <h1><span id="endScore"></span></h1>
-      <p>Refresh the page to play again! 🧺🍏🍎🍎</p>
+      <p>Refresh the page to play again! 🧺</p>
     </div>
   </div>
-  </main>
-  <footer> 🍏🍎🍏</footer>
+ 
     <script type="module" src="src/main.js"></script>
 </body>
 </html>

@@ -6,7 +6,6 @@ const canvas = {
   height: 500
 }
 
-
 const speedDown= 300;
 
 const gameStart = document.querySelector("#gameStart");
@@ -72,12 +71,11 @@ class GameScene extends Phaser.Scene{
     fill: "#000000"
   });
 
-  this.timedEvent = this.time.delayedCall(40000, this.gameOver,[],this );
+  this.timedEvent = this.time.delayedCall(300, this.gameOver,[],this );
 
   this.emitter = this.add.particles(0, 0,"money", {
     speed: 100, 
     gravityY: speedDown-200,
-    scale: 0.04, 
     duration: 100, 
     emitting: false
 
@@ -131,12 +129,14 @@ class GameScene extends Phaser.Scene{
 
     if(this.points >= 30){
       finalScore.textContent = "You won 🏆"
-      finalScore.textContent = this.points; 
+      finalScore.innerHTML = this.points; 
     }else{
       finalScore.textContent = this.points; 
       finalScore.textContent = "You lost!😭"
     }
      gameEnd.style.display = "flex";
+  
+
   }
 
 }

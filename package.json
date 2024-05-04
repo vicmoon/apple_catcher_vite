@@ -20,7 +20,7 @@
     },
     "devDependencies": {
         "terser": "^5.28.1",
-        "vite": "^5.1.4"
+        "vite": "^5.2.11"
     },
     "dependencies": {
         "phaser": "^3.80.1"
